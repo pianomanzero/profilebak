@@ -1,0 +1,12 @@
+# User specific aliases and functions
+alias startsyn=/usr/local/bin/synergy-start.sh
+alias tmax="printf '\e[8;55;1010t'"
+# alias mybugs='python /usr/local/bin/bugz search --product Escalations --product OneFS --cc tmorris --show-url --show-status --status all'
+## custom aliases for bugz (pybugz)
+alias bugz='bugz --connection=connection'
+alias bugz-search='bugz search --product OneFS --product Escalations --status all --show-url --show-status'
+alias mybugs='bugz search --product Escalations --product OneFS --cc tmorris --reporter tmorris --show-url --show-status --show-component --show-changed'
+alias bugz-search='bugz search --product OneFS --product Escalations --status all --show-status --show-component --show-changed --show-project'
+alias bugz-patch='bugz search --product Patches --component "Protocols: NFS Userspace" --component "Protocols" --component "Userspace" --target-ms 7.2.1 --target-ms 8.0.0 --target-ms 8.0.1 --target-ms 8.1.1 --target-ms 8.2.0 --status all --show-status --show-component --show-changed --show-project patch'
+alias bugz-esc='bugz search --product Escalations --status NEW --status ASSIGNED --status REOPENED --component "Protocols: NFS Userspace" --show-status --show-changed --show-version --show-action'
+
